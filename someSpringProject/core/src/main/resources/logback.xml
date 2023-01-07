@@ -6,7 +6,8 @@
             </pattern>
         </encoder>
     </appender>
-    <logger name="my.project" level="DEBUG"/>
+    <logger name="some.spring.project" level="DEBUG"/>
+    <logger name="org.springframework" level="DEBUG"/>
     <root level="INFO">
         <appender-ref ref="STDOUT"/>
     </root>
