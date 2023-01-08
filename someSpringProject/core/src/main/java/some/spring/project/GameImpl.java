@@ -12,7 +12,9 @@ public class GameImpl implements Game{
     private static final Logger logger = LoggerFactory.getLogger(GameImpl.class);
     @Autowired
     private NumberGenerator numberGenerator;
-    private int guessCount = 10;
+    @Autowired
+    @GuessCount
+    private int guessCount;
     private int number;
     private int guess;
     private int smallest;
@@ -48,6 +50,11 @@ public class GameImpl implements Game{
     @Override
     public void setGuess(int guess) {
         this.guess = guess;
+    }
+
+    @Override
+    public int getGuessCount(){
+        return this.guessCount;
     }
 
     @Override

@@ -1,10 +1,13 @@
-package some.spring.project;
+package some.spring.project.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import some.spring.project.*;
 
 @Configuration
+@Import(GameConfig.class)
 @ComponentScan(basePackages = "some.spring.project")
 public class AppConfig {
     @Bean
